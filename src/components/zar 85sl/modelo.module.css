@@ -1,3 +1,15 @@
+.section {
+    width: 100%;
+    position: relative;
+}
+
+.filtro {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a3;
+}
 .navSpace {
     height: 15vh;
     padding: 2em 0;
@@ -73,6 +85,7 @@
     color: #FF3A2D;
 }
 .galeria {
+    position: relative;
     padding: 2em 0;
     display: flex;
     align-items: center;
@@ -180,6 +193,9 @@
     .textContainerMobile{
         display: block;
     }
+    .textContainerMobile img {
+        width: 90%;
+    }
     .galeria {
         display: none;
     }
@@ -195,5 +211,10 @@
     }
     .imgGaleria img {
         width: 98%;
+    }
+}
+@media (max-width: 400px) {
+    .items{
+        font-size: 10px;
     }
 }

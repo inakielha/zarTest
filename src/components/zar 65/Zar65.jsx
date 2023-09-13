@@ -14,16 +14,22 @@ import video65 from "../../assets/zar/65/65wsp.MOV"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import ImageOpen from "../imageOpen/imageOpen"
 
 export default function Zar65() {
     const sliderRef = useRef(null);
+    const [imagen, setImagen] = useState({ open: false, src: "" ,index:""})
+
 
     const [caracteristica, setCaracteristica] = useState("")
     const desplegar = (descripcion) => {
         if (caracteristica === descripcion) setCaracteristica("")
         else setCaracteristica(descripcion)
     }
-
+    const bigPicture = (e) => {
+        console.log(e.target.src)
+        setImagen({ open: true, src: e.target.src, index: e.target.id })
+    }
     const settings = {
         infinite: true,
         speed: 1000,
@@ -34,8 +40,11 @@ export default function Zar65() {
         adaptiveHeight: true,
     };
 
+  let imgArr = [lancha ,lancha2, lancha3]
+
     return (
-        <>
+        <div className={s.section}>
+            <div className={imagen.open ? s.filtro : ""}> </div>
             <div className={s.navSpace}></div>
             <div className={s.header}>
                 <div className={s.imgContainer}><img src={img} alt="" /></div>
@@ -153,9 +162,10 @@ export default function Zar65() {
                     <h3 >GALERIA</h3>
                 </div>
                 <div className={s.galeria}>
-                    <div className={s.imgGaleria}><img src={lancha} alt="" /></div>
-                    <div className={s.imgGaleria}><img src={lancha2} alt="" /></div>
-                    <div className={s.imgGaleria}><img src={lancha3} alt="" /></div>
+                {imagen.open && <ImageOpen  imgArr={imgArr} src={imagen.src} setImagen={setImagen} imagen={imagen} />}
+                    <div className={s.imgGaleria}><img id="0" onClick={(e) => bigPicture(e)} src={lancha} alt="" /></div>
+                    <div className={s.imgGaleria}><img id="1" onClick={(e) => bigPicture(e)} src={lancha2} alt="" /></div>
+                    <div className={s.imgGaleria}><img id="2" onClick={(e) => bigPicture(e)} src={lancha3} alt="" /></div>
                 </div>
                 <div className={s.sliderContainer}>
                     <Slider className={s.slider} {...settings} ref={sliderRef} >
@@ -171,6 +181,6 @@ export default function Zar65() {
                     <video width={"100%"} src={video65} controls ></video>
                 </div>
             </div>
-        </>
+        </div>
     )
 }

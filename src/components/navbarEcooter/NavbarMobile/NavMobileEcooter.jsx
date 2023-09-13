@@ -45,7 +45,7 @@ export default function NavMobileEcooter({ isMobile, landing }) {
     speed: 1000,
     arrows: false,
     slidesToShow: 3.2,
-    autoplay: true,
+    autoplay: false,
     slidesToScroll: 1,
     adaptiveHeight: true,
 
@@ -74,18 +74,17 @@ export default function NavMobileEcooter({ isMobile, landing }) {
           </div>
         </div>
         <Hamburger setMobileMenu={setMobileMenu} show={mobileMenu} />
-
       </nav>
       <div className={j.section} style={scroll ? { margin: "0" } : { marginBottom: "0" }}>
         <div className={j.contenedor}>
-          <div onClick={() => window.location.href = "https://www.navalmotor.com/"} className={j.back}>
+          <div onClick={() => navigate("/")} className={j.back}>
             <IconContext.Provider value={{ className: j.icon, size: "1em" }}>
               <HiChevronLeft />
             </IconContext.Provider>
 
             <span>Home</span>
           </div>
-          <div className={j.imgContainer}><img src={logoSar} alt="logo" /></div>
+          <div onClick={() => navigate("/")} className={j.imgContainer}><img src={logoSar} alt="logo" /></div>
           <span>ss</span>
         </div>
       </div>
@@ -121,7 +120,7 @@ export default function NavMobileEcooter({ isMobile, landing }) {
                 backgroundColor: "#FF3A2D"
               }
               : {}
-          }>ZAR 59SSL</button>
+          }>ZAR 59SL</button>
         </div>
         <div className={s.btngap}>
           <button onClick={(e) => window.open("https://www.navalmotor.com/contacto")} style={

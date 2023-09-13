@@ -1,3 +1,16 @@
+.section {
+    width: 100%;
+    position: relative;
+}
+
+.filtro {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a3;
+}
+
 .contenedor {
     width: 90%;
 }
@@ -76,6 +89,7 @@
     color: #FF3A2D;
 }
 .galeria {
+    position: relative;
     padding: 2em 0;
     display: flex;
     align-items: center;
@@ -130,6 +144,7 @@
 .textContainerMobile{
     display: none;
 }
+
 @media (max-width: 768px) {
     .mobile {
         display: none;
@@ -187,12 +202,16 @@
     }
     .items {
         padding: 1em 0;
+        font-size: 12px;
     }
     .textContainer {
         font-size: 10px;
     }
     .textContainerMobile{
         display: block;
+    }
+    .textContainerMobile img {
+        width: 90%;
     }
     .galeria {
         display: none;
@@ -219,5 +238,10 @@
     .iframe video {
         padding: 1em 0;
         height: auto;
+    }
+}
+@media (max-width: 400px) {
+    .items{
+        font-size: 10px;
     }
 }

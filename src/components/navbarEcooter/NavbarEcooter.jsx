@@ -50,7 +50,7 @@ export default function NavbarEcooter({ isMobile, landing }) {
             </div>
           </div>
           <div className={s.categorias}>
-            <div className={s.mercuryContainer}>
+            <div className={s.mercuryContainer} onClick={()=>navigate("/")}>
               <img src={logoSar} alt="" />
             </div>
             <div className={s.spanCont}>
@@ -77,7 +77,7 @@ export default function NavbarEcooter({ isMobile, landing }) {
                     : {}
                 }
               >
-                zar 595sl
+                zar 59Sl
               </span>
               <span
                 onClick={() => navigate("/zar65")}

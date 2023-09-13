@@ -39,7 +39,6 @@ export default function Header(){
         slidesToScroll: 1,
         adaptiveHeight: true,
         afterChange: (currentSlide) => { 
-          console.log(currentSlide)  
           setCurrentSlide(currentSlide)
         },
       };
@@ -76,7 +75,6 @@ export default function Header(){
           // }
         }
       };
-    console.log("render",currentSlide)
     return(
       <>
       <div className={s.navSpace}></div>

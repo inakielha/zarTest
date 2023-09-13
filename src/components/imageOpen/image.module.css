@@ -1,0 +1,81 @@
+.imgDialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    /* background-color: red; */
+}
+.imgfoto {
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    /* background-color: red; */
+}
+.imgContainer {
+    width: 70%;
+}
+
+.imgContainer img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.close {
+    padding-left: 1em;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 2em;
+}
+.flechaCont{
+    width: 20%;
+    /* background-color: green; */
+}
+.flechaContDer {
+    display: flex;
+    width: 20%;
+    /* background-color: green; */
+    justify-content: end;
+}
+.flecha {
+    /* background-color: blue; */
+    font-size: 5em;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .icon {
+        font-size: 1em;
+    }
+
+    .imgDialog {
+        width: 75%;
+        flex-direction: column-reverse;
+    }
+
+    .close {
+        padding-left: 0;
+        width: 100%;
+        padding-bottom: 1em;
+        justify-content: flex-end;
+    }
+
+    .imgContainer {
+        width: 100%;
+    }
+
+}
