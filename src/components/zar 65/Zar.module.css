@@ -57,6 +57,7 @@
     color: #FFFFFF;
     padding: 0.5em 0;
     width: 50%;
+    cursor: pointer;
 }
 .titulo {
     background-color: #9E9E9E;

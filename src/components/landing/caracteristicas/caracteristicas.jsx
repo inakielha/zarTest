@@ -119,7 +119,7 @@ export default function Caracteristicas() {
 
                     <div className={s.info} onClick={() => toggleAccordion(3)} style={isOpen == 3 ? { backgroundColor: "#FF3A2D" } : {}}>
                         {isOpen === 3 ? <IoIosArrowUp size={"2em"} style={{ paddingLeft: "0.5em" }} /> : <IoIosArrowDown size={"2em"} style={{ paddingLeft: "0.5em" }} />}
-                        <span>LA TELA GOMADA</span>
+                        <span>LA TELA ENGOMADA</span>
                     </div>
                     <div className={s.txtCont}>
                         {isOpen === 3 &&

@@ -15,6 +15,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import ImageOpen from "../imageOpen/imageOpen"
+import pdf from "../../assets/zar/65/65.pdf"
+
 
 export default function Zar65() {
     const sliderRef = useRef(null);
@@ -30,6 +32,18 @@ export default function Zar65() {
         console.log(e.target.src)
         setImagen({ open: true, src: e.target.src, index: e.target.id })
     }
+
+    const handleDownload = () => {
+        const fileName = 'ZAR 65.pdf'; // Reemplaza esto con el nombre que desees para el archivo
+    
+        // Crear un enlace temporal para la descarga
+        const link = document.createElement('a');
+        link.href = pdf;
+        link.target = '_blank'; // Abrir el enlace en una nueva pestaña (opcional)
+        link.download = fileName;
+        link.click();
+      };
+
     const settings = {
         infinite: true,
         speed: 1000,
@@ -50,13 +64,13 @@ export default function Zar65() {
                 <div className={s.imgContainer}><img src={img} alt="" /></div>
                 <div className={s.absolute}>
                     <div className={s.imgContainer}><img src={zar} alt="" /></div>
-                    <button>FICHA TECNICA</button>
+                    <button onClick={()=>handleDownload()}>FICHA TECNICA</button>
                 </div>
             </div>
             <div className={s.headerMobile}>
                 <div className={s.imgContainer}><img src={zar} alt="" /></div>
                 <div className={s.imgContainerBote}><img src={img} alt="" /></div>
-                <button>FICHA TECNICA</button>
+                <button onClick={()=>handleDownload()}>FICHA TECNICA</button>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <div className={s.titulo}>
