@@ -16,6 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import ImageOpen from "../imageOpen/imageOpen"
 import pdf from "../../assets/zar/65/65.pdf"
+import VideoPlayer from "../videoPlayer/VideoPlayer"
 
 
 export default function Zar65() {
@@ -192,7 +193,8 @@ export default function Zar65() {
                     <h3 >VIVI LA EXPERIENCIA 3D ZAR</h3>
                 </div>
                 <div className={s.iframe}>
-                    <video width={"100%"} src={video65} controls ></video>
+                    {/* <video width={"100%"} src={video65} controls ></video> */}
+                    <VideoPlayer video={video65}/>
                 </div>
             </div>
         </div>

@@ -111,11 +111,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
+}
+
+.iframe div {
+    width: 100%;
 }
 .iframe video {
     padding: 1em 0;
-    height: 80vh;
+    /* height: 80vh; */
+    width: 100%;
 }
 .textContainer {
     width: 90%;
@@ -234,7 +239,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 90%;
+        width: 100%;
     }
     .iframe video {
         padding: 1em 0;
