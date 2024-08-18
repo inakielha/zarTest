@@ -21,13 +21,14 @@ import img6mobile from "../../../assets/zar/home/portada/portada mobile/Enmascar
 import img7mobile from "../../../assets/zar/home/portada/portada mobile/Enmascarar grupo 504.jpg"
 import s from "./header.module.css";
 import { useRef, useState } from "react";
+import { pathImages } from "../../../pathImages";
 
 
 export default function Header(){
   const sliderRef = useRef(null);
   const sliderRefWeb = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  // const [imagen, setImagen] = useState({ open: false, src: "" })
+  // const [imagen, setImagen] = useState({ open: false, src: pathImages + "" })
   let imgArr = [img, img2, img3]
   
   const settings = {
@@ -83,48 +84,48 @@ export default function Header(){
       <div className={s.absoluteR} onClick={() => handlePrevSlide()}><IoIosArrowForward className={s.flecha} color="#fff" /></div>
       <Slider {...settings} className={s.slider} ref={sliderRefWeb} >
         <div className={s.slide}>
-          <img src={img} alt="test" />
+          <img src={pathImages + img} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img2} alt="test" />
+          <img src={pathImages + img2} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img3} alt="test" />
+          <img src={pathImages + img3} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img4} alt="test" />
+          <img src={pathImages + img4} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img5} alt="test" />
+          <img src={pathImages + img5} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img6} alt="test" />
+          <img src={pathImages + img6} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img7} alt="test" />
+          <img src={pathImages + img7} alt="test" />
         </div>
       </Slider>
       <Slider className={s.sliderMobile} {...settingsMobile} ref={sliderRef} >
         <div className={s.slide}>
-          <img src={imgmobile} alt="test" />
+          <img src={pathImages + imgmobile} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img2mobile} alt="test" />
+          <img src={pathImages + img2mobile} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img3mobile} alt="test" />
+          <img src={pathImages + img3mobile} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img4mobile} alt="test" />
+          <img src={pathImages + img4mobile} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img5mobile} alt="test" />
+          <img src={pathImages + img5mobile} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img6mobile} alt="test" />
+          <img src={pathImages + img6mobile} alt="test" />
         </div>
         <div className={s.slide}>
-          <img src={img7mobile} alt="test" />
+          <img src={pathImages + img7mobile} alt="test" />
         </div>
       </Slider>
       <div className={s.absoluteText}>construido en Italia, diseñado con pasión.</div>

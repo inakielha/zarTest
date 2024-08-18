@@ -28,6 +28,7 @@ import bote from "../../../assets/caracteristicas/Enmascarar grupo 492.png"
 import bote2 from "../../../assets/caracteristicas/Enmascarar grupo 493.png"
 import bote3 from "../../../assets/caracteristicas/spazio (1).png"
 import grafico from "../../../assets/caracteristicas/Imagen 399.png"
+import { pathImages } from "../../../pathImages";
 
 export default function Caracteristicas() {
     const [isOpen, setIsOpen] = useState()
@@ -51,7 +52,7 @@ export default function Caracteristicas() {
                         {isOpen === 1 &&
                             <>
                                 <div className={ `${s.option} ${s.mobile}`}>
-                                    <div className={s.imgCont}><img src={calidad} alt="" /></div>
+                                    <div className={s.imgCont}><img src={pathImages + calidad} alt="" /></div>
                                     <div className={s.textoCont}>
                                         <h4>LA CALIDAD SE PUEDE VER Y TOCAR.</h4>
                                         <span className={s.texto} style={{ paddingLeft: "0", width: "100%" }}>
@@ -65,7 +66,7 @@ export default function Caracteristicas() {
                                 <div className={s.optionTwo}>
                                     <div className={s.textoCont}>
                                         <h4>LA CALIDAD SE PUEDE VER Y TOCAR.</h4>
-                                        <div className={s.imgCont}><img src={calidadMobile} alt="" /></div>
+                                        <div className={s.imgCont}><img src={pathImages + calidadMobile} alt="" /></div>
                                         <span className={s.texto} style={{ paddingLeft: "0", width: "100%" }}>
                                             Calidad de vida a bordo:  espacio, comodidad y seguridad son el resultado de una extrema atención a cada detalle, pasamanos para cada pasajero, ausencia de salientes que puedan lesionarte, cierres estancos, deflector en el parabrisas, asientos ergonómicos, espacios modulares.
                                         </span>
@@ -87,7 +88,7 @@ export default function Caracteristicas() {
                     <div className={s.txtCont}>
                         {isOpen === 2 &&
                             <div className={s.option}>
-                                <div className={s.imgCont}><img src={barcoMobile} alt="" /></div>
+                                <div className={s.imgCont}><img src={pathImages + barcoMobile} alt="" /></div>
                                 <div className={s.textoCont}>
                                     <span className={s.texto} >
                                         El eje sobre el que gira toda la actividad de elaboración de un nuevo ZAR es el prototipo "virtual" desarrollado por el centro de cómputo. Los cálculos matemáticos, las simulaciones, la definición de las líneas de agua se materializan en el modelo del casco.
@@ -129,56 +130,56 @@ export default function Caracteristicas() {
                                         Para la construcción de las partes encauchadas de los barcos ZAR, el Astillero ZAR-Formenti utiliza exclusivamente productos ORCA® de Pennel Industries: tejido de poliéster "High Tenacity" con recubrimiento de CSM (caucho sintético policlorosulfonado) y CR (cloropreno). Los tubulares se embalan con cubrejuntas interior y exterior y la junta entre ellos y el casco es doble en todo el perímetro
                                     </span>
                                     <div className={s.cualidades}>
-                                        <div className={s.dimensions}><img className={s.dimensions} src={solMobile} alt="" /></div>
-                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={sol} alt="" /></div>
+                                        <div className={s.dimensions}><img className={s.dimensions} src={pathImages + solMobile} alt="" /></div>
+                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={pathImages + sol} alt="" /></div>
                                         <div className={s.cualidadesText}>
                                             <h4>Resistencia a los rayos ultravioleta</h4>
                                             <span>La capa exterior de los tejidos engomados ORCA® presenta unas excepcionales características de resistencia al envejecimiento que permiten ofrecer una gama cromática incomparable.</span>
                                         </div>
                                     </div>
                                     <div className={s.cualidades}>
-                                        <div className={s.dimensions}><img className={s.dimensions} src={fuegoMobile} alt="" /></div>
-                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={fuego} alt="" /></div>
+                                        <div className={s.dimensions}><img className={s.dimensions} src={pathImages + fuegoMobile} alt="" /></div>
+                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={pathImages + fuego} alt="" /></div>
                                         <div className={s.cualidadesText}>
                                             <h4>Resistencia al fuego</h4>
                                             <span>Es gracias a la base de caucho que los productos ORCA® mantienen todas sus propiedades en caso de exposición accidental al calor.</span>
                                         </div>
                                     </div>
                                     <div className={s.cualidades}>
-                                        <div className={s.dimensions}><img className={s.dimensions} src={abrasionMobile} alt="" /></div>
-                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={abrasion} alt="" /></div>
+                                        <div className={s.dimensions}><img className={s.dimensions} src={pathImages + abrasionMobile} alt="" /></div>
+                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={pathImages + abrasion} alt="" /></div>
                                         <div className={s.cualidadesText}>
                                             <h4>Resistencia a la abrasión</h4>
                                             <span>La fórmula química de la capa de CSM confiere al tejido cauchutado ORCA® una buena resistencia a la abrasión.</span>
                                         </div>
                                     </div>
                                     <div className={s.cualidades}>
-                                        <div className={s.dimensions}><img className={s.dimensions} src={hidroMobile} alt="" /></div>
-                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={hidro} alt="" /></div>
+                                        <div className={s.dimensions}><img className={s.dimensions} src={pathImages + hidroMobile} alt="" /></div>
+                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={pathImages + hidro} alt="" /></div>
                                         <div className={s.cualidadesText}>
                                             <h4>Resistencia a los hidrocarburos</h4>
                                             <span>La resistencia a los hidrocarburos del tejido engomado ORCA® lo convierte en un material recomendado para la construcción de embarcaciones de trabajo.</span>
                                         </div>
                                     </div>
                                     <div className={s.cualidades}>
-                                        <div className={s.dimensions}><img className={s.dimensions} src={tubularMobile} alt="" /></div>
-                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={tubular} alt="" /></div>
+                                        <div className={s.dimensions}><img className={s.dimensions} src={pathImages + tubularMobile} alt="" /></div>
+                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={pathImages + tubular} alt="" /></div>
                                         <div className={s.cualidadesText}>
                                             <h4>Reparación tubular</h4>
                                             <span>Al igual que una cámara de aire, las mantas ORCA® son fáciles de reparar, con pegamento.</span>
                                         </div>
                                     </div>
                                     <div className={s.cualidades}>
-                                        <div className={s.dimensions}><img className={s.dimensions} src={resstenciaMobile} alt="" /></div>
-                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={mecanica} alt="" /></div>
+                                        <div className={s.dimensions}><img className={s.dimensions} src={pathImages + resstenciaMobile} alt="" /></div>
+                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={pathImages + mecanica} alt="" /></div>
                                         <div className={s.cualidadesText}>
                                             <h4>Resistencia mecánica</h4>
                                             <span>La elección de un soporte textil de alta tenacidad, asociado a una excelente adherencia, confiere al producto ORCA® una excelente resistencia mecánica.</span>
                                         </div>
                                     </div>
                                     <div className={s.cualidades}>
-                                        <div className={s.dimensions}><img className={s.dimensions} src={intemperieMobile} alt="" /></div>
-                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={interperie} alt="" /></div>
+                                        <div className={s.dimensions}><img className={s.dimensions} src={pathImages + intemperieMobile} alt="" /></div>
+                                        <div className={s.dimensionsMobile}><img className={s.dimensions} src={pathImages + interperie} alt="" /></div>
 
                                         <div className={s.cualidadesText}>
                                             <h4>Resistencia a la intemperie</h4>
@@ -186,8 +187,8 @@ export default function Caracteristicas() {
                                         </div>
                                     </div>
                                     <div className={s.cualidades}>
-                                        <div className={s.imgCont}><img src={orca} alt="" /></div>
-                                        <div className={s.imgCont}><img src={materiales} alt="" /></div>
+                                        <div className={s.imgCont}><img src={pathImages + orca} alt="" /></div>
+                                        <div className={s.imgCont}><img src={pathImages + materiales} alt="" /></div>
                                     </div>
                                 </div>
                             </div>
@@ -202,19 +203,19 @@ export default function Caracteristicas() {
                         {isOpen === 4 &&
                         <>
                             <div className={ `${s.option} ${s.mobile}`} >
-                                <div className={s.imgContCarena}><img src={carena} alt="" /></div>
+                                <div className={s.imgContCarena}><img src={pathImages + carena} alt="" /></div>
                                 <div className={s.casco}>
                                     <span className={s.texto} >
                                         La longitud del casco es el parámetro más importante, a igualdad de otros elementos de diseño, para determinar las cualidades de navegación de un bote con casco de fibra de vidrio. Todos los ZAR, gracias a la ausencia del tubo de proa y al retroceso del espejo de popa hasta el límite de los conos de popa, tienen un casco mucho más largo que el de las embarcaciones neumáticas con casco convencional de fibra de vidrio de la misma eslora. en los diagramas, todos los ZAR deben compararse con barcos mucho más largos si desea tener cascos de la misma longitud. Además, la ausencia del tubo de proa (patente internacional) ha permitido crear cascos con una "V" muy profunda y generar formas extremadamente efectivas en todas las condiciones de navegación. Los túneles laterales (otra patente),
                                     </span>
                                     <div className={s.cualidades} style={{ borderBottom: "none" }}>
-                                        <div className={s.imgCont} ><img src={bote2} alt="" /></div>
-                                        <div className={s.imgCont} ><img src={bote} alt="" /></div>
+                                        <div className={s.imgCont} ><img src={pathImages + bote2} alt="" /></div>
+                                        <div className={s.imgCont} ><img src={pathImages + bote} alt="" /></div>
                                     </div>
                                 </div>
                             </div>
                             <div className={ s.optionTwo} style={{flexDirection:"column-reverse"}}>
-                                <div className={s.imgContCarena}><img src={carenaMobile} alt="" /></div>
+                                <div className={s.imgContCarena}><img src={pathImages + carenaMobile} alt="" /></div>
                                 <div className={s.casco}>
                                     <span className={s.texto} >
                                         La longitud del casco es el parámetro más importante, a igualdad de otros elementos de diseño, para determinar las cualidades de navegación de un bote con casco de fibra de vidrio. Todos los ZAR, gracias a la ausencia del tubo de proa y al retroceso del espejo de popa hasta el límite de los conos de popa, tienen un casco mucho más largo que el de las embarcaciones neumáticas con casco convencional de fibra de vidrio de la misma eslora. en los diagramas, todos los ZAR deben compararse con barcos mucho más largos si desea tener cascos de la misma longitud. Además, la ausencia del tubo de proa (patente internacional) ha permitido crear cascos con una "V" muy profunda y generar formas extremadamente efectivas en todas las condiciones de navegación. Los túneles laterales (otra patente),
@@ -233,7 +234,7 @@ export default function Caracteristicas() {
                         {isOpen === 5 &&
                         <>
                             <div className={`${s.option} ${s.mobile}`} >
-                                <div className={s.imgCont} style={{ paddingLeft: "1em" }}><img src={bote3} alt="" /></div>
+                                <div className={s.imgCont} style={{ paddingLeft: "1em" }}><img src={pathImages + bote3} alt="" /></div>
                                 <div className={s.textoCont}>
                                     <span className={s.texto} >
                                         La longitud del casco es el parámetro más importante, a igualdad de otros elementos de diseño, para determinar las cualidades de navegación de un bote con casco de fibra de vidrio. Todos los ZAR, gracias a la ausencia del tubo de proa y al retroceso del espejo de popa hasta el límite de los conos de popa, tienen un casco mucho más largo que el de las embarcaciones neumáticas con casco convencional de fibra de vidrio de la misma eslora. en los diagramas, todos los ZAR deben compararse con barcos mucho más largos si desea tener cascos de la misma longitud. Además, la ausencia del tubo de proa (patente internacional) ha permitido crear cascos con una "V" muy profunda y generar formas extremadamente efectivas en todas las condiciones de navegación. Los túneles laterales (otra patente),
@@ -246,7 +247,7 @@ export default function Caracteristicas() {
                                         La longitud del casco es el parámetro más importante, a igualdad de otros elementos de diseño, para determinar las cualidades de navegación de un bote con casco de fibra de vidrio. Todos los ZAR, gracias a la ausencia del tubo de proa y al retroceso del espejo de popa hasta el límite de los conos de popa, tienen un casco mucho más largo que el de las embarcaciones neumáticas con casco convencional de fibra de vidrio de la misma eslora. en los diagramas, todos los ZAR deben compararse con barcos mucho más largos si desea tener cascos de la misma longitud. Además, la ausencia del tubo de proa (patente internacional) ha permitido crear cascos con una "V" muy profunda y generar formas extremadamente efectivas en todas las condiciones de navegación. Los túneles laterales (otra patente),
                                     </span>
                                 </div>
-                                <div className={s.imgCont} style={{ paddingLeft: "1em" }}><img style={{width:"90%"}} src={bote3Mobile} alt="" /></div>
+                                <div className={s.imgCont} style={{ paddingLeft: "1em" }}><img style={{width:"90%"}} src={pathImages + bote3Mobile} alt="" /></div>
                             </div>
                         </>
                         }
@@ -275,7 +276,7 @@ export default function Caracteristicas() {
                                             agresivas y nocivas para la salud, especialmente diseñada para procesos de infusión.
                                         </span>
                                     </div>
-                                    <div className={s.imgCont} style={{ paddingLeft: "1em" }}><img src={grafico} alt="" /></div>
+                                    <div className={s.imgCont} style={{ paddingLeft: "1em" }}><img src={pathImages + grafico} alt="" /></div>
 
                                 </div>
                                 <div className={s.textoCont} style={{ paddingBottom: "2.5em" }}>

@@ -15,8 +15,8 @@
     width: 90%;
 }
 .navSpace {
-    height: 15vh;
-    padding: 2em 0;
+    /* height: 15vh; */
+    padding: 20px 0;
 }
 .header {
     width: 100%;
@@ -151,7 +151,6 @@
         display: none;
     }
     .navSpace {
-
         height: 27.5vh;
         padding: 0;
     }

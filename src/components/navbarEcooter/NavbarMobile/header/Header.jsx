@@ -3,6 +3,7 @@ import { HiOutlineArrowSmallLeft, HiOutlineArrowLeft, HiChevronLeft } from "reac
 import { IconContext } from "react-icons";
 import logo from "../../../../assets/logosar.svg"
 import logo from "../../../../assets/zar/home/Asset 2.png"
+import { pathImages } from "../../../../pathImages";
 
 
 
@@ -17,7 +18,7 @@ export default function Header() {
 
           <span>Home</span>
         </div>
-        <div className={s.imgContainer}><img src={logo} alt="logo" /></div>
+        <div className={s.imgContainer}><img src={pathImages+logo} alt="logo" /></div>
         <span>ss</span>
       </div>
     </div>

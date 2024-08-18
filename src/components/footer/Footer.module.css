@@ -1,4 +1,4 @@
-footer {
+/* footer {
   width: 100%;
   display: flex;
   align-items: center;
@@ -11,12 +11,9 @@ footer {
 .footerContainer { 
     width: 80%;
     display: flex;
-    /* flex-direction: column; */
-    /* gap: 1.5em; */
   align-items: flex-start;
-  /* align-items: start; */
   justify-content: space-between;
-  /* background-color: red; */
+
 }
 
 .info {
@@ -82,19 +79,15 @@ footer .text {
 }
 
 .redes {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   gap: 1em;
-  /* justify-content: space-between;
-  align-items: start; */
 }
 .follow {
   color: #6e6e6e;
   font-size: 24px;
   margin: 0;
   padding: 0;
-  /* background-color: red; */
 }
 
 .redesContainer {
@@ -137,7 +130,6 @@ footer .text {
   display: none;
 }
 
-/* MOBIULe */
 @media only screen and (max-width: 640px) {
 
   .footerContainer {
@@ -174,4 +166,205 @@ footer .text {
 
 }
 
+ */
 
+
+
+
+ footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 2px grey;
+  padding: 1em 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.footerContainer {
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.info p {
+  margin: 0;
+  font-size: 16px;
+}
+
+footer .text {
+  color: #0c4c6b;
+  font-family: "Segoe UI", "Open Sans";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.info p {
+  color: #000000;
+  font-family: "Segoe UI", "Open Sans";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.numero {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.numero span {
+  width: 100%;
+  color: #000000;
+  font-family: "Segoe UI", "Open Sans";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.wspContainer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 10%;
+}
+
+.wspContainer img {
+  width: 100%;
+}
+
+.redes {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 100%;
+  align-self: center;
+}
+
+.follow {
+  display: none;
+  color: #6e6e6e;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  /* background-color: red; */
+}
+
+.redesContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.redesContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.5px solid #edf0f2;
+  box-shadow: 0px 0px 5px #6e6e6e;
+  cursor: pointer;
+  width: 11vw;
+  height: 11vw;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+.redesContainer div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redesContainer img {
+  width: 80%;
+}
+
+.redesContainer div:hover {
+  box-shadow: 0px 0px 10px #6e6e6e;
+}
+
+.redes .text {
+  display: none;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+
+
+
+/* MOBIULe */
+@media only screen and (max-width: 640px) {
+
+  .footerContainer {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .redes {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .redesContainer {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .redes p {
+    display: block;
+    color: #FF3A2D;
+    font-family: "Segoe UI", "Open Sans";
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  footer .text {
+    font-size: 16px;
+  }
+
+  .redesContainer div {
+    width: 11vw;
+    height: 11vw;
+  }
+  .icon {
+    font-size: 40px;
+  }
+
+
+}
+
+
+
+@media screen and (min-width:768px) and (max-width: 1550px) {
+  footer .text {
+    font-size: 16px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .numero span {
+    font-size: 16px;
+  }
+}

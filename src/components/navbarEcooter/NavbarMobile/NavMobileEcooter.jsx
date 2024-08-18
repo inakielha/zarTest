@@ -18,6 +18,8 @@ import { useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { pathImages } from "../../../pathImages";
+import Sidebar from "../Sidebar universal/Sidebar";
 
 
 export default function NavMobileEcooter({ isMobile, landing }) {
@@ -27,10 +29,6 @@ export default function NavMobileEcooter({ isMobile, landing }) {
   const [scroll, setScroll] = useState(false)
 
   const navigate = useNavigate()
-
-  const navigateLanding = (e) => {
-    navigate("/")
-  };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -60,38 +58,37 @@ export default function NavMobileEcooter({ isMobile, landing }) {
             <LuMenu onClick={() => setMobileMenu("show")} />
           </IconContext.Provider>
           <div className={style.imgContainer}>
-            <img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={logo} alt="logo" />
+            <img onClick={() => window.location.href = "https://www.navalmotor.com/"} src={pathImages+ logo} alt="logo" />
           </div>
           <div>
             <div className={style.contenedorLupa}>
-              {/* <IconContext.Provider value={{ className: style.iconLupa, size: "1.5em" }}>
-                <BiSearch />
-              </IconContext.Provider> */}
-              <IoLogoWhatsapp size={"2.4em"} onClick={() => window.open("https://api.whatsapp.com/send?phone=5491126661777&", '_blank')}
+              <IoLogoWhatsapp size={"2.4em"} onClick={() => window.open("https://api.whatsapp.com/send?phone=01147961888&", '_blank')}
                 style={{ color: "#25d366", cursor: "pointer" }}
               />
             </div>
           </div>
         </div>
-        <Hamburger setMobileMenu={setMobileMenu} show={mobileMenu} />
+        {/* <Hamburger setMobileMenu={setMobileMenu} show={mobileMenu} /> */}
+        <Sidebar open={mobileMenu} close={setMobileMenu} />
+
       </nav>
       <div className={j.section} style={scroll ? { margin: "0" } : { marginBottom: "0" }}>
         <div className={j.contenedor}>
-          <div onClick={() => navigate("/")} className={j.back}>
+          <div onClick={() => navigate("/zar-formenti/")} className={j.back}>
             <IconContext.Provider value={{ className: j.icon, size: "1em" }}>
               <HiChevronLeft />
             </IconContext.Provider>
 
             <span>Home</span>
           </div>
-          <div onClick={() => navigate("/")} className={j.imgContainer}><img src={logoSar} alt="logo" /></div>
+          <div onClick={() => navigate("/zar-formenti/")} className={j.imgContainer}><img src={pathImages+ "logoZarFormenti.png"} alt="logo" /></div>
           <span>ss</span>
         </div>
       </div>
       <Slider className={s.btnContainer} {...settings} ref={sliderRef} >
         <div className={s.btngap}>
 
-          <button onClick={() => navigate("/zar85")} style={
+          <button onClick={() => navigate("/zar-formenti/zar85")} style={
             landing === "85"
               ? {
                 color: "white",
@@ -102,7 +99,7 @@ export default function NavMobileEcooter({ isMobile, landing }) {
         </div>
         <div className={s.btngap}>
 
-          <button onClick={() => navigate("/zar65")} style={
+          <button onClick={() => navigate("/zar-formenti/zar65")} style={
             landing == "65"
               ? {
                 color: "white",
@@ -113,7 +110,7 @@ export default function NavMobileEcooter({ isMobile, landing }) {
         </div>
         <div className={s.btngap}>
 
-          <button onClick={() => navigate("/zar59")} style={
+          <button onClick={() => navigate("/zar-formenti/zar59")} style={
             landing === "59"
               ? {
                 color: "white",

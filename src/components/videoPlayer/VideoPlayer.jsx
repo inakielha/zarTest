@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { pathImages } from '../../pathImages';
 
 const VideoPlayer = ({video}) => {
   const videoRef = useRef(null);
@@ -35,7 +36,7 @@ const VideoPlayer = ({video}) => {
   return (
     <div>
       <video ref={videoRef} controls>
-        <source src={video} type="video/mp4" />
+        <source src={pathImages+video} type="video/mp4" />
       </video>
     </div>
   );

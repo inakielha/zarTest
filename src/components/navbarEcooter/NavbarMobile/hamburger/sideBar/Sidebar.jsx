@@ -15,11 +15,11 @@ export default function Sidebar({ open, close }) {
 
             <Accordion style={isOpen === 2 ? { backgroundColor: "#CCCCCC" } : {}} id={2} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"PROPULSIÓN INTERNA"} arrlink={[{ text: "VOLVO PENTA", url: "https://www.navalmotor.com/volvo-penta-propulsion" }, { text: "MITSUBISHI", url: "https://www.navalmotor.com/mitsubishi" }, { text: "kongsberg", url: "https://www.kongsberg.com/" }]} />
 
-            <Accordion style={isOpen === 3 ? { backgroundColor: "#CCCCCC" } : {}} id={3} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"MOVILIDAD"} arrlink={[{ text: "POLARIS", url: "https://www.navalmotor.com/polaris" }, { text: "CLUB CAR", url: "https://www.navalmotor.com/clubcar" }]} />
+            <Accordion style={isOpen === 3 ? { backgroundColor: "#CCCCCC" } : {}} id={3} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"MOVILIDAD"} arrlink={[{ text: "POLARIS", url: "https://www.navalmotor.com/polaris" }, { text: "CLUB CAR", url: "https://www.navalmotor.com/clubcar" }, , { text: "ECOOTER", url: "https://www.navalmotor.com/ecooter" }]} />
 
             <Accordion style={isOpen === 4 ? { backgroundColor: "#CCCCCC" } : {}} id={4} isOpen={isOpen} setIsOpen={setIsOpen} titulo={"EMBARCACIONES"} arrlink={embarcaciones} />
 
-            <div className={s.tituloText} onClick={() => window.location.href = "https://www.clubdeyatesnaval.com/"}>CLUB YATES</div>
+            <div className={s.tituloText} onClick={() => window.open("https://www.clubdeyatesnaval.com/","_blank")}>CLUB YATES</div>
             <div className={s.tituloText} onClick={() => window.location.href = "https://www.navalmotor.com/novedades"}>NOVEDADES</div>
             <div className={s.tituloText} onClick={() => window.location.href = "https://www.navalmotor.com/#soluciones"}>SOLUCIONES</div>
             <div className={s.tituloText} onClick={() => window.location.href = "https://www.navalmotor.com/#garantias"}>GARANTIA</div>

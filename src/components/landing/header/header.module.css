@@ -1,7 +1,7 @@
-.navSpace{
+/* .navSpace{
     height: 15vh;
     padding: 1em 0;
-  }
+  } */
 .header {
     position: relative;
 }
@@ -21,6 +21,7 @@
     transform: translateY(-50%);
     z-index: 10;
 }
+
 .flecha {
     font-size: 5em;
     cursor: pointer;
@@ -32,6 +33,7 @@
     height: auto;
     /* background-color: blue; */
 }
+
 .slide img {
     width: 100%;
     /* object-fit: cover; */
@@ -47,6 +49,7 @@ BARRA */
     align-items: center;
     justify-content: center;
 }
+
 .centrado {
     width: 90%;
     display: flex;
@@ -54,12 +57,14 @@ BARRA */
     justify-content: space-between;
     padding: 1em;
 }
-.centrado span{
+
+.centrado span {
     font-weight: bold;
     font-size: 24px;
     text-transform: uppercase;
     width: 100%;
 }
+
 .circles {
     display: flex;
     align-items: center;
@@ -68,31 +73,44 @@ BARRA */
     width: 100%;
     color: gray;
 }
+
 .sliderMobile {
     display: none;
 }
+
 .absoluteShadow {
     display: none;
 }
+
 .absoluteText {
     display: none;
 }
+
 @media (max-width: 768px) {
+
+    .navSpace {
+        height: 15vh;
+        padding: 1em 0;
+    }
+
     /* Tus estilos CSS aquí */
     .slider {
         display: none;
     }
+
     .sliderMobile {
         display: block;
     }
+
     .slide {
         height: auto;
     }
-  
+
     .flecha {
         font-size: 2em;
 
     }
+
     .absoluteText {
         text-align: center;
         display: block;
@@ -103,10 +121,11 @@ BARRA */
         z-index: 10;
         font-size: 16px;
         font-weight: bold;
-        color: #FFFFFF ;
+        color: #FFFFFF;
         text-transform: uppercase;
         width: 100%;
     }
+
     .absoluteShadow {
         display: block;
         width: 100%;
@@ -116,15 +135,17 @@ BARRA */
         top: 20%;
         transform: translateY(-50%);
         z-index: 9;
-        background: linear-gradient(to bottom,#000000,#000000cc,#00000000);
+        background: linear-gradient(to bottom, #000000, #000000cc, #00000000);
         /* background-color: red; */
     }
+
     .barra {
         display: none;
     }
-  }
-  @media (max-width: 400px) {
-    .absoluteText{
+}
+
+@media (max-width: 400px) {
+    .absoluteText {
         font-size: 14px;
     }
 }

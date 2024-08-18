@@ -1,4 +1,5 @@
 import whatsapp from "../../assets/footer/whatsapp.svg"
+import { pathImages } from "../../pathImages";
 import s from "./Footer.module.css"
 import {BsCurrencyDollar,BsLinkedin,BsInstagram, BsYoutube} from "react-icons/bs"
 
@@ -11,10 +12,10 @@ export default function Footer({color}) {
           <p>Av. del Libertador 701, Vicente López, Buenos Aires</p>
           <p>info@navalmotor.com</p>
           <div className={s.numero}>
-            <div className={s.wspContainer}>
-              <img src={whatsapp} alt="contact" />
-            </div>
-            <span>+541126661777</span>
+            {/* <div className={s.wspContainer}>
+              <img src={pathImages+ whatsapp} alt="contact" />
+            </div> */}
+            <span>011 4796 1888</span>
           </div>
         </div>
         <div className={s.redes}>
@@ -23,7 +24,7 @@ export default function Footer({color}) {
             <div>
               <a
                 target="_blank"
-                href="https://www.instagram.com/navalmotor_arg/"
+                href= {pathImages ? "https://www.instagram.com/naval_motor" : "https://www.instagram.com/naval_motor"}
               >
                 <BsInstagram size={"2.5em"} color={"#707070"} />
               </a>
@@ -36,22 +37,6 @@ export default function Footer({color}) {
                 <BsYoutube size={"2.5em"} color={"#707070"}/>
               </a>
             </div>
-            {/* <div>
-              <a
-                href="https://www.ambito.com/contenidos/mercados.html"
-                target="_blank"
-              >
-                <BsCurrencyDollar size={"2.5em"} color={"#707070"}/>
-              </a>
-            </div> */}
-            {/* <div>
-              <a
-                href="https://www.linkedin.com/company/naval-motor/mycompany/"
-                target="_blank"
-              >
-                <BsLinkedin size={"2.5em"} color={"#707070"}/>
-              </a>
-            </div> */}
           </div>
         </div>
       </div>

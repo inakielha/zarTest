@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import ImageOpen from "../imageOpen/imageOpen"
 import pdf from "../../assets/zar/85/85sl.pdf"
+import { pathImages } from "../../pathImages"
 
 
 export default function Modelo() {
@@ -26,7 +27,6 @@ export default function Modelo() {
     }
 
     const bigPicture = (e) => {
-        console.log(e.target.src)
         setImagen({ open: true, src: e.target.src, index: e.target.id })
     }
 
@@ -50,22 +50,22 @@ export default function Modelo() {
         slidesToScroll: 1,
         adaptiveHeight: true,
     };
-  let imgArr = [lancha2, lancha3, lancha]
+  let imgArr = [pathImages+lancha2, pathImages+lancha3, pathImages+lancha]
 
     return (
         <div className={s.section}>
             <div className={imagen.open ? s.filtro : ""}> </div>
             <div className={s.navSpace}></div>
             <div className={s.header}>
-                <div className={s.imgContainer}><img src={img} alt="" /></div>
+                <div className={s.imgContainer}><img src={pathImages+img} alt="" /></div>
                 <div className={s.absolute}>
-                    <div className={s.imgContainer}><img src={zar} alt="" /></div>
+                    <div className={s.imgContainer}><img src={pathImages+zar} alt="" /></div>
                     <button onClick={()=>handleDownload()}>FICHA TECNICA</button>
                 </div>
             </div>
             <div className={s.headerMobile}>
-                <div className={s.imgContainer}><img src={zar} alt="" /></div>
-                <div className={s.imgContainerBote}><img src={img} alt="" /></div>
+                <div className={s.imgContainer}><img src={pathImages+zar} alt="" /></div>
+                <div className={s.imgContainerBote}><img src={pathImages+img} alt="" /></div>
                 <button onClick={()=>handleDownload()}>FICHA TECNICA</button>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
@@ -128,10 +128,10 @@ export default function Modelo() {
                     <>
                         <div className={`${s.textContainer} ${s.mobile}`}>
                             <h4>DATOS TÉCNICOS</h4>
-                            <div className={s.imgContainer}><img src={datos} alt="" /></div>
+                            <div className={s.imgContainer}><img src={pathImages+datos} alt="" /></div>
                         </div>
                         <div className={s.textContainerMobile}>
-                            <div className={s.imgContainer}><img src={datosMobile} alt="" /></div>
+                            <div className={s.imgContainer}><img src={pathImages+datosMobile} alt="" /></div>
                         </div>
                     </>
                 }
@@ -140,15 +140,15 @@ export default function Modelo() {
                 </div>
                 <div className={s.galeria}>
                 {imagen.open && <ImageOpen  imgArr={imgArr} src={imagen.src} setImagen={setImagen} imagen={imagen} />}
-                    <div className={s.imgGaleria}><img id="0" onClick={(e) => bigPicture(e)} src={lancha} alt="" /></div>
-                    <div className={s.imgGaleria}><img id="1" onClick={(e) => bigPicture(e)} src={lancha2} alt="" /></div>
-                    <div className={s.imgGaleria}><img id="2" onClick={(e) => bigPicture(e)} src={lancha3} alt="" /></div>
+                    <div className={s.imgGaleria}><img id="0" onClick={(e) => bigPicture(e)} src={pathImages+lancha} alt="" /></div>
+                    <div className={s.imgGaleria}><img id="1" onClick={(e) => bigPicture(e)} src={pathImages+lancha2} alt="" /></div>
+                    <div className={s.imgGaleria}><img id="2" onClick={(e) => bigPicture(e)} src={pathImages+lancha3} alt="" /></div>
                 </div>
                 <div className={s.sliderContainer}>
                 <Slider className={s.slider} {...settings} ref={sliderRef} >
-                    <div className={s.imgGaleria}><img src={lancha} alt="" /></div>
-                    <div className={s.imgGaleria}><img src={lancha2} alt="" /></div>
-                    <div className={s.imgGaleria}><img src={lancha3} alt="" /></div>
+                    <div className={s.imgGaleria}><img src={pathImages+lancha} alt="" /></div>
+                    <div className={s.imgGaleria}><img src={pathImages+lancha2} alt="" /></div>
+                    <div className={s.imgGaleria}><img src={pathImages+lancha3} alt="" /></div>
                 </Slider>
                 </div>
 

@@ -1,5 +1,5 @@
 import img from "../../assets/zar/65/portada.jpg"
-import zar from "../../assets/zar/65/Enmascarar grupo 491.png"
+import zar from "../../assets/zar/65/descarga.png"
 import lancha from "../../assets/zar/65/1Zar65Croazia1.jpg"
 import lancha2 from "../../assets/zar/65/2Zar65Croazia4.jpg"
 import lancha3 from "../../assets/zar/65/3 ZAR 65 controluce su roccia.jpg"
@@ -17,11 +17,12 @@ import Slider from "react-slick";
 import ImageOpen from "../imageOpen/imageOpen"
 import pdf from "../../assets/zar/65/65.pdf"
 import VideoPlayer from "../videoPlayer/VideoPlayer"
+import { pathImages } from "../../pathImages"
 
 
 export default function Zar65() {
     const sliderRef = useRef(null);
-    const [imagen, setImagen] = useState({ open: false, src: "" ,index:""})
+    const [imagen, setImagen] = useState({ open: false, src: "", index: "" })
 
 
     const [caracteristica, setCaracteristica] = useState("")
@@ -30,20 +31,20 @@ export default function Zar65() {
         else setCaracteristica(descripcion)
     }
     const bigPicture = (e) => {
-        console.log(e.target.src)
+        // console.log(e.target.src)
         setImagen({ open: true, src: e.target.src, index: e.target.id })
     }
 
     const handleDownload = () => {
         const fileName = 'ZAR 65.pdf'; // Reemplaza esto con el nombre que desees para el archivo
-    
+
         // Crear un enlace temporal para la descarga
         const link = document.createElement('a');
         link.href = pdf;
         link.target = '_blank'; // Abrir el enlace en una nueva pestaña (opcional)
         link.download = fileName;
         link.click();
-      };
+    };
 
     const settings = {
         infinite: true,
@@ -55,23 +56,23 @@ export default function Zar65() {
         adaptiveHeight: true,
     };
 
-  let imgArr = [lancha ,lancha2, lancha3]
+    let imgArr = [pathImages + lancha, pathImages + lancha2, pathImages + lancha3]
 
     return (
         <div className={s.section}>
             <div className={imagen.open ? s.filtro : ""}> </div>
             <div className={s.navSpace}></div>
             <div className={s.header}>
-                <div className={s.imgContainer}><img src={img} alt="" /></div>
+                <div className={s.imgContainer}><img src={pathImages + img} alt="" /></div>
                 <div className={s.absolute}>
-                    <div className={s.imgContainer}><img src={zar} alt="" /></div>
-                    <button onClick={()=>handleDownload()}>FICHA TECNICA</button>
+                    <div className={s.imgContainer}><img src={pathImages ? pathImages + "descarga.png" : zar} alt="" /></div>
+                    <button onClick={() => handleDownload()}>FICHA TECNICA</button>
                 </div>
             </div>
             <div className={s.headerMobile}>
-                <div className={s.imgContainer}><img src={zar} alt="" /></div>
-                <div className={s.imgContainerBote}><img src={img} alt="" /></div>
-                <button onClick={()=>handleDownload()}>FICHA TECNICA</button>
+                <div className={s.imgContainer}><img src={pathImages ? pathImages + "descarga.png" : zar} alt="" /></div>
+                <div className={s.imgContainerBote}><img src={pathImages + img} alt="" /></div>
+                <button onClick={() => handleDownload()}>FICHA TECNICA</button>
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <div className={s.titulo}>
@@ -166,10 +167,10 @@ export default function Zar65() {
                     <>
                         <div className={`${s.textContainer} ${s.mobile}`}>
                             <h4>DATOS TÉCNICOS</h4>
-                            <div className={s.imgContainer}><img src={datos} alt="" /></div>
+                            <div className={s.imgContainer}><img src={pathImages + datos} alt="" /></div>
                         </div>
                         <div className={s.textContainerMobile}>
-                            <div className={s.imgContainer}><img src={datosMobile} alt="" /></div>
+                            <div className={s.imgContainer}><img src={pathImages + datosMobile} alt="" /></div>
                         </div>
                     </>
                 }
@@ -177,16 +178,16 @@ export default function Zar65() {
                     <h3 >GALERIA</h3>
                 </div>
                 <div className={s.galeria}>
-                {imagen.open && <ImageOpen  imgArr={imgArr} src={imagen.src} setImagen={setImagen} imagen={imagen} />}
-                    <div className={s.imgGaleria}><img id="0" onClick={(e) => bigPicture(e)} src={lancha} alt="" /></div>
-                    <div className={s.imgGaleria}><img id="1" onClick={(e) => bigPicture(e)} src={lancha2} alt="" /></div>
-                    <div className={s.imgGaleria}><img id="2" onClick={(e) => bigPicture(e)} src={lancha3} alt="" /></div>
+                    {imagen.open && <ImageOpen imgArr={imgArr} src={imagen.src} setImagen={setImagen} imagen={imagen} />}
+                    <div className={s.imgGaleria}><img id="0" onClick={(e) => bigPicture(e)} src={pathImages + lancha} alt="" /></div>
+                    <div className={s.imgGaleria}><img id="1" onClick={(e) => bigPicture(e)} src={pathImages + lancha2} alt="" /></div>
+                    <div className={s.imgGaleria}><img id="2" onClick={(e) => bigPicture(e)} src={pathImages + lancha3} alt="" /></div>
                 </div>
                 <div className={s.sliderContainer}>
                     <Slider className={s.slider} {...settings} ref={sliderRef} >
-                        <div className={s.imgGaleria}><img src={lancha} alt="" /></div>
-                        <div className={s.imgGaleria}><img src={lancha2} alt="" /></div>
-                        <div className={s.imgGaleria}><img src={lancha3} alt="" /></div>
+                        <div className={s.imgGaleria}><img src={pathImages + lancha} alt="" /></div>
+                        <div className={s.imgGaleria}><img src={pathImages + lancha2} alt="" /></div>
+                        <div className={s.imgGaleria}><img src={pathImages + lancha3} alt="" /></div>
                     </Slider>
                 </div>
                 <div className={s.titulo}>
@@ -194,7 +195,7 @@ export default function Zar65() {
                 </div>
                 <div className={s.iframe}>
                     {/* <video width={"100%"} src={video65} controls ></video> */}
-                    <VideoPlayer video={video65}/>
+                    <VideoPlayer video={video65} />
                 </div>
             </div>
         </div>

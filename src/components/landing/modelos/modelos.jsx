@@ -3,6 +3,7 @@ import img2 from "../../../assets/zar/65/portada.jpg"
 import img3 from "../../../assets/zar/59/portada.jpg"
 import s from "./modelos.module.css"
 import Link, { useNavigate } from "react-router-dom"
+import { pathImages } from "../../../pathImages"
 
 export default function Modelos() {
     const navigate = useNavigate()
@@ -15,21 +16,21 @@ export default function Modelos() {
                 <div className={s.lanchasContainer}>
                     <div className={s.modelo}>
                         <div className={s.imgContainer}>
-                            <img src={img} alt="" />
+                            <img src={pathImages + img} alt="" />
                         </div>
-                        <button onClick={()=>navigate("/zar85")}>zar 85 sl</button>
+                        <button onClick={()=>navigate("/zar-formenti/zar85")}>zar 85 sl</button>
                     </div>
                     <div className={s.modelo}>
                         <div className={s.imgContainer}>
-                            <img src={img2} alt="" />
+                            <img src={pathImages + img2} alt="" />
                         </div>
-                        <button onClick={()=>navigate("/zar65")}>zar 65</button>
+                        <button onClick={()=>navigate("/zar-formenti/zar65")}>zar 65</button>
                     </div>
                     <div className={s.modelo}>
                         <div className={s.imgContainer}>
-                            <img src={img} alt="" />
+                            <img src={pathImages + img} alt="" />
                         </div>
-                        <button onClick={()=>navigate("/zar59")}>zar 59 sl</button>
+                        <button onClick={()=>navigate("/zar-formenti/zar59")}>zar 59 sl</button>
                     </div>
                 </div>
             </div>
